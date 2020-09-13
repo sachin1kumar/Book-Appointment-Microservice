@@ -31,6 +31,7 @@ public class BookAppointment {
     @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = SqlTimeDeserializer.class)
     private Time time;
+    private String patient_name;
 
     public BookAppointment() {
 
@@ -82,5 +83,13 @@ public class BookAppointment {
 
     public void setBooking_id(BigInteger booking_id) {
         this.booking_id = booking_id;
+    }
+
+    public String getPatient_name() {
+        return patient_name;
+    }
+
+    public void setPatient_name(String patient_name) {
+        this.patient_name = patient_name;
     }
 }
